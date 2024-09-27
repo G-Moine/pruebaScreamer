@@ -10,19 +10,23 @@
             margin: 0;
             padding: 0;
             height: 100%;
+            overflow: hidden;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
         video {
-            width: 100%;  /* Ocupa el 100% del ancho */
-            height: auto;  /* Mantiene la proporción del video */
-            display: block;  /* Elimina el espacio en línea en algunos navegadores */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;  
         }
     </style>
 </head>
 <body>
     <h1>por curioso</h1>
-    <video id="mivideo" autoplay controls>
+    <video id="mivideo" autoplay muted controls>
         <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
