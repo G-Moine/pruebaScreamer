@@ -16,7 +16,7 @@
 </head>
 <body>
     <h1>por curioso</h1>
-    <video autoplay>
+    <video id="mivideo" autoplay controls>
         <source src="video.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -24,7 +24,7 @@
 <script>
         // Función que pone el video en pantalla completa
         function abrirPantallaCompleta() {
-            var video = document.getElementById("video.mp4");
+            var video = document.getElementById("mivideo");
             if (video.requestFullscreen) {
                 video.requestFullscreen();
             } else if (video.mozRequestFullScreen) { // Firefox
