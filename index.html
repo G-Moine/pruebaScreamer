@@ -23,7 +23,7 @@
 </head>
 <body>
     <h1>por curioso</h1>
-     <video id="miVideo" loop>
+     <video id="miVideo" muted loop>
         <source src="video.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
@@ -34,7 +34,9 @@
             var video = document.getElementById("miVideo");
             video.style.display = 'block'; // Mostrar el video
             video.muted = false; // Desmutear el video
-            video.play(); // Iniciar reproducción
+             video.play().catch(function(error) {
+                console.log("No se pudo reproducir el video:", error);
+                });
             document.removeEventListener('mousemove', arguments.callee); // Eliminar listener después de la primera interacción
         });
     </script>
