@@ -20,10 +20,32 @@
     </style>
 </head>
 <body>
-    <h1>Mi Página con un Video</h1>
-    <video autoplay controls>
+    <h1>por curioso</h1>
+    <video autoplay>
         <source src="video.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
+
+<script>
+        // Función que pone el video en pantalla completa
+        function abrirPantallaCompleta() {
+            var video = document.getElementById("miVideo");
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { // Firefox
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { // Chrome, Safari y Opera
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+        }
+
+        // Cuando la página se carga, el video se reproduce en pantalla completa
+        window.onload = function() {
+            abrirPantallaCompleta();
+        };
+    </script>
+    
 </body>
 </html>
