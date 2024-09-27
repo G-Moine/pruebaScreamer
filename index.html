@@ -22,46 +22,19 @@
 </head>
 <body>
     <h1>por curioso</h1>
-    <video id="mivideo" autoplay muted loop controls>
+    <video id="miVideo" autoplay muted controls>
         <source src="video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        Tu navegador no soporta la etiqueta de video.
     </video>
 
-<script>
-    document.addEventListener('mousemove', function() {
+    <script>
+        // Detectar movimiento del mouse para activar el sonido
+        document.addEventListener('mousemove', function() {
             var video = document.getElementById("miVideo");
-            video.muted = false; // Asegúrate de que el video no esté silenciado
+            video.muted = false; // Desmutea el video
             video.play(); // Inicia la reproducción
-        document.removeEventListener('mousemove', arguments.callee); // Eliminar el listener después de la primera interacción
+            document.removeEventListener('mousemove', arguments.callee); // Elimina el listener después de la primera interacción
         });
-        // Función que pone el video en pantalla completa
-        /*function abrirPantallaCompleta() {
-            var video = document.getElementById("mivideo");
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.mozRequestFullScreen) { // Firefox
-                video.mozRequestFullScreen();
-            } else if (video.webkitRequestFullscreen) { // Chrome, Safari y Opera
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) { // IE/Edge
-                video.msRequestFullscreen();
-            }
-        }*/
-        /*function toggleMute() {
-    var video = document.getElementById("mivideo");
-    if (video.muted) {
-        video.muted = false;
-    } else {
-        video.muted = false;
-    }
-}*/
-
-        // Cuando la página se carga, el video se reproduce en pantalla completa
-       // window.onload = function() {
-            //abrirPantallaCompleta();
-            //toggleMute();
-        
     </script>
-    
 </body>
 </html>
