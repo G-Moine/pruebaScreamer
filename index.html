@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con Video</title>
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #f4f4f4;
         }
-        
+        video {
+            width: 100%;  /* Ocupa el 100% del ancho */
+            height: auto;  /* Mantiene la proporción del video */
+            display: block;  /* Elimina el espacio en línea en algunos navegadores */
+        }
     </style>
 </head>
 <body>
