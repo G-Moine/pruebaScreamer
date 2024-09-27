@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con Video</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
+        body {
             font-family: Arial, sans-serif;
+            text-align: center;
             background-color: #f4f4f4;
+            margin: 0;
         }
         video {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;  
+            max-width: 1920px; /* Tamaño máximo de ancho */
+            max-height: 1080px; /* Tamaño máximo de alto */
+            height: auto; /* Mantiene la proporción del video */ 
         }
     </style>
 </head>
