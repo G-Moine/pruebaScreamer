@@ -22,18 +22,19 @@
 </head>
 <body>
     <h1>por curioso</h1>
-    <video id="miVideo" autoplay muted controls>
+     <video id="miVideo" autoplay muted controls>
         <source src="video.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
 
     <script>
-        // Detectar movimiento del mouse para activar el sonido
+        // Detectar movimiento del mouse para mostrar el video
         document.addEventListener('mousemove', function() {
             var video = document.getElementById("miVideo");
-            video.muted = false; // Desmutea el video
-            video.play(); // Inicia la reproducción
-            document.removeEventListener('mousemove', arguments.callee); // Elimina el listener después de la primera interacción
+            video.style.display = 'block'; // Mostrar el video
+            video.muted = false; // Desmutear el video
+            video.play(); // Iniciar reproducción
+            document.removeEventListener('mousemove', arguments.callee); // Eliminar listener después de la primera interacción
         });
     </script>
 </body>
