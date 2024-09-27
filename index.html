@@ -28,33 +28,39 @@
     </video>
 
 <script>
+    document.addEventListener('mousemove', function() {
+            var video = document.getElementById("miVideo");
+            video.muted = false; // Asegúrate de que el video no esté silenciado
+            video.play(); // Inicia la reproducción
+        document.removeEventListener('mousemove', arguments.callee); // Eliminar el listener después de la primera interacción
+        });
         // Función que pone el video en pantalla completa
-        //function abrirPantallaCompleta() {
-        //    var video = document.getElementById("mivideo");
-        //    if (video.requestFullscreen) {
-        //        video.requestFullscreen();
-        //    } else if (video.mozRequestFullScreen) { // Firefox
-        //        video.mozRequestFullScreen();
-        //    } else if (video.webkitRequestFullscreen) { // Chrome, Safari y Opera
-        //        video.webkitRequestFullscreen();
-        //    } else if (video.msRequestFullscreen) { // IE/Edge
-        //        video.msRequestFullscreen();
-        //    }
-       // }
-        function toggleMute() {
+        /*function abrirPantallaCompleta() {
+            var video = document.getElementById("mivideo");
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.mozRequestFullScreen) { // Firefox
+                video.mozRequestFullScreen();
+            } else if (video.webkitRequestFullscreen) { // Chrome, Safari y Opera
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { // IE/Edge
+                video.msRequestFullscreen();
+            }
+        }*/
+        /*function toggleMute() {
     var video = document.getElementById("mivideo");
     if (video.muted) {
         video.muted = false;
     } else {
         video.muted = false;
     }
-}
+}*/
 
         // Cuando la página se carga, el video se reproduce en pantalla completa
-        window.onload = function() {
+       // window.onload = function() {
             //abrirPantallaCompleta();
-            toggleMute();
-        };
+            //toggleMute();
+        
     </script>
     
 </body>
