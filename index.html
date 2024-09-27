@@ -17,12 +17,13 @@
             max-width: 1920px; /* Tamaño máximo de ancho */
             max-height: 1080px; /* Tamaño máximo de alto */
             height: auto; /* Mantiene la proporción del video */ 
+            display: none;
         }
     </style>
 </head>
 <body>
     <h1>por curioso</h1>
-     <video id="miVideo" autoplay muted controls>
+     <video id="miVideo" autoplay controls>
         <source src="video.mp4" type="video/mp4">
         Tu navegador no soporta la etiqueta de video.
     </video>
@@ -33,7 +34,7 @@
             var video = document.getElementById("miVideo");
             video.style.display = 'block'; // Mostrar el video
             video.muted = false; // Desmutear el video
-            //video.play(); // Iniciar reproducción
+            video.play(); // Iniciar reproducción
             document.removeEventListener('mousemove', arguments.callee); // Eliminar listener después de la primera interacción
         });
     </script>
