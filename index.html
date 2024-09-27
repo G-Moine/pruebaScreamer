@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,25 +11,20 @@
             text-align: center;
             background-color: #f4f4f4;
         }
-        video {
-            width: 80%;
-            max-width: 800px;
-            height: auto;
-            margin-top: 20px;
-        }
+        
     </style>
 </head>
 <body>
     <h1>por curioso</h1>
     <video autoplay>
         <source src="video.mp4" type="video/mp4">
-        Tu navegador no soporta la etiqueta de video.
+        Your browser does not support the video tag.
     </video>
 
 <script>
         // Función que pone el video en pantalla completa
         function abrirPantallaCompleta() {
-            var video = document.getElementById("miVideo");
+            var video = document.getElementById("video.mp4");
             if (video.requestFullscreen) {
                 video.requestFullscreen();
             } else if (video.mozRequestFullScreen) { // Firefox
